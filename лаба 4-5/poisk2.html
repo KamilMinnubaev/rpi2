@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Поиск в различных поисковых системах" />
+    <meta
+      name="keywords"
+      content="поиск, Яндекс, Рамблер, Апорт, Search, файл"
+    />
+    <meta name="author" content="Анастасия" />
+    <title>Поиск в различных поисковых системах в новом окне</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #eae7dc;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 20px;
+        color: var(--white);
+      }
+      .search-form-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .search-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: 700px; /* Добавлено для фиксации ширины формы */
+
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 50%;
+        padding: 8px;
+        margin-bottom: 6px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #e85a4f;
+        color: #edf5e1;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+
+    <script>
+      function openSearchFormYandex() {
+        var query = document.getElementById("yandex-search").value;
+        window.open(
+          "https://yandex.ru/search/?text=" + encodeURIComponent(query),
+          "_blank",
+          "top=100,left=100, width=600,height=400,toolbar=no,menubar=no,status=yes,location=no,titlebar=no,scrollbars=yes,resizable=yes"
+        );
+      }
+
+      function openSearchFormRambler() {
+        var query = document.getElementById("rambler-search").value;
+        window.open(
+          "https://nova.rambler.ru/search?query=" + encodeURIComponent(query),
+          "_blank",
+          "top=100,left=100, width=600,height=400,toolbar=no,menubar=no,status=yes,location=no,titlebar=no,scrollbars=yes,resizable=yes"
+        );
+      }
+
+      function openSearchFormAport() {
+        var query = document.getElementById("aport-search").value;
+        window.open(
+          "https://www.aport.ru/search?q=" + encodeURIComponent(query),
+          "_blank",
+          "top=100,left=100, width=600,height=400,toolbar=no,menubar=no,status=yes,location=no,titlebar=no,scrollbars=yes,resizable=yes"
+        );
+      }
+
+      function openSearchFormGoogle() {
+        var query = document.getElementById("google-search").value;
+        window.open(
+          "https://www.google.com/search?q=" + encodeURIComponent(query),
+          "_blank",
+          "top=100,left=100, width=600,height=400,toolbar=no,menubar=no,status=yes,location=no,titlebar=no,scrollbars=yes,resizable=yes"
+        );
+      }
+
+      function openSearchFormFileSearch() {
+        var query = document.getElementById("filesearch").value;
+        window.open(
+          "https://www.filesearch.ru/?query=" + encodeURIComponent(query),
+          "_blank",
+          "top=100,left=100, width=600,height=400,toolbar=no,menubar=no,status=yes,location=no,titlebar=no,scrollbars=yes,resizable=yes"
+        );
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PayTrack</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Главная</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="poisk2.html">П2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Поиск в различных поисковых системах в новом окне</h1>
+
+    <div class="search-form-container">
+      <div class="search-form">
+        <form onsubmit="openSearchFormYandex(); return false;">
+          <label for="yandex-search">Яндекс</label>
+          <input type="text" id="yandex-search" placeholder="Введите запрос" />
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+
+      <div class="search-form">
+        <form onsubmit="openSearchFormRambler(); return false;">
+          <label for="rambler-search">Rambler</label>
+          <input type="text" id="rambler-search" placeholder="Введите запрос" />
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+
+      <div class="search-form">
+        <form onsubmit="openSearchFormAport(); return false;">
+          <label for="aport-search">Aport</label>
+          <input type="text" id="aport-search" placeholder="Введите запрос" />
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+
+      <div class="search-form">
+        <form onsubmit="openSearchFormGoogle(); return false;">
+          <label for="google-search">Google</label>
+          <input type="text" id="google-search" placeholder="Введите запрос" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="search-form">
+        <form onsubmit="openSearchFormFileSearch(); return false;">
+          <label for="filesearch">FileSearch</label>
+          <input type="text" id="filesearch" placeholder="Введите запрос" />
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

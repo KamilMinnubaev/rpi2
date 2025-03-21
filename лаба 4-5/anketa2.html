@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Форма-анкета для ввода персональных данных"
+    />
+    <meta name="keywords" content="форма, анкета, персональные данные" />
+    <meta name="author" content="Анастасия" />
+    <title>Форма-анкета</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #eae7dc;
+        color: #e85a4f;
+      }
+
+      .card {
+        background-color: #fff;
+        border: 1px solid #e85a4f;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      .btn-custom {
+        background-color: #e85a4f;
+        border-color: #e85a4f;
+      }
+
+      .btn-custom:hover {
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PayTrack</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Главная</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="anketa2.html">А2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <h2 class="text-center">Форма-анкета</h2>
+            <form action="http://127.0.0.1:5500" method="post">
+              <div class="form-group">
+                <label for="lastName">Фамилия:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  value="Сахалов"
+                  pattern="^[a-zA-Zа-яА-ЯёЁ]+$"
+                  title="Пожалуйста, используйте только буквы"
+                />
+              </div>
+              <div class="form-group">
+                <label for="firstName">Имя:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  value="Алмаз"
+                  pattern="^[a-zA-Zа-яА-ЯёЁ]+$"
+                  title="Пожалуйста, используйте только буквы"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="patronymic">Отчество:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="patronymic"
+                  name="patronymic"
+                  value="Раисович"
+                  pattern="^[a-zA-Zа-яА-ЯёЁ]+$"
+                  title="Пожалуйста, используйте только буквы"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  value="salah@gmail.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="country">Выбор страны:</label>
+                <select
+                  class="form-control"
+                  id="country"
+                  name="country"
+                  required
+                >
+                  <!-- Тег <select>: Определяет выпадающий список для выбора одного значения из списка -->
+                  <option value="country1">Россия</option>
+                  <option value="country2">США</option>
+                  <option value="country3">Китай</option>
+                  <option value="country4">Бразилия</option>
+                  <option value="country5">Индия</option>
+                  <option value="country6">Франция</option>
+                  <option value="country7">Япония</option>
+                  <option value="country8">Гермния</option>
+                  <option value="country9">Южная Африка</option>
+                  <option value="country10">Австралия</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Выбор города:</label><br />
+                <input type="radio" id="city1" name="city" value="city1" /
+                required>
+                <label for="city1">Москва</label>
+
+                <input type="radio" id="city2" name="city" value="city2" />
+                <label for="city2">Нью-Йорк</label>
+
+                <input type="radio" id="city3" name="city" value="city3" />
+                <label for="city3">Шанхай</label>
+
+                <input type="radio" id="city4" name="city" value="city4" />
+                <label for="city4">Рио-де-Жанейро</label>
+
+                <input type="radio" id="city5" name="city" value="city5" />
+                <label for="city5">Мумбаи</label>
+              </div>
+
+              <div class="form-group">
+                <label>Выбор языка:</label><br />
+                <input type="checkbox" id="language1" name="language[]"
+                value="language1" required / >
+                <label for="language1">Русский</label>
+
+                <input
+                  type="checkbox"
+                  id="language2"
+                  name="language[]"
+                  value="language2"
+                />
+                <label for="language2">Английский</label>
+
+                <input
+                  type="checkbox"
+                  id="language3"
+                  name="language[]"
+                  value="language3"
+                />
+                <label for="language3">Китайский</label>
+
+                <input
+                  type="checkbox"
+                  id="language4"
+                  name="language[]"
+                  value="language4"
+                />
+                <label for="language4">Португальский</label>
+
+                <input
+                  type="checkbox"
+                  id="language5"
+                  name="language[]"
+                  value="language5"
+                />
+                <label for="language5">Хинди</label>
+              </div>
+
+              <div class="form-group">
+                <label for="professions">Выбор профессий:</label>
+                <select
+                  multiple
+                  class="form-control"
+                  id="professions"
+                  name="professions[]"
+                  required
+                >
+                  <option value="profession1">Программист</option>
+                  <option value="profession2">Врач</option>
+                  <option value="profession3">Учитель</option>
+                  <option value="profession4">Инженер</option>
+                  <option value="profession5">Пожарный</option>
+                  <option value="profession6">Певец</option>
+                  <option value="profession7">Повар</option>
+                  <option value="profession8">Дизайнер</option>
+                  <option value="profession9">Фермер</option>
+                  <option value="profession10">Тренер</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Пароль"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="additionalInfo">Дополнительная информация:</label>
+                <textarea
+                  class="form-control"
+                  id="additionalInfo"
+                  name="additionalInfo"
+                  rows="3"
+                  placeholder="Дополнительная информация о вас"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-custom">
+                Загрузить информацию
+              </button>
+              <!-- Тег <button>: Определяет кнопку для отправки формы -->
+              <!-- Тег <submit>: Отправляет форму на сервер -->
+              <button type="reset" class="btn btn-secondary">
+                Очистить форму
+              </button>
+              <!-- Тег <reset>: Сбрасывает значения полей формы на их начальные значения -->
+              <input type="hidden" name="student" value="Almaz" />
+              <!-- Тег <input> с атрибутом type="hidden": Создает скрытое поле формы -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

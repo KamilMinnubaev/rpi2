@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Поиск в различных поисковых системах" />
+    <meta
+      name="keywords"
+      content="поиск, Яндекс, Рамблер, Апорт, Search, файл"
+    />
+    <meta name="author" content="Анастасия" />
+    <title>Поиск в различных поисковых системах</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #eae7dc;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      h1 {
+        margin-top: 20px;
+        color: var(--white);
+      }
+      .search-form-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .search-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: 700px; /* Добавлено для фиксации ширины формы */
+
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input {
+        width: 50%;
+        padding: 8px;
+        margin-bottom: 6px;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #e85a4f;
+        color: #edf5e1;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">PayTrack</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html"
+                >Главная</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="poisk.html">П1</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1>Поиск в различных поисковых системах</h1>
+    <div class="search-form">
+      <form action="https://yandex.ru/search/" method="get">
+        <label for="yandex-search">Яндекс</label>
+        <input
+          type="text"
+          id="yandex-search"
+          name="text"
+          placeholder="Введите запрос"
+        />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+
+    <div class="search-form">
+      <form action="https://nova.rambler.ru/search" method="get">
+        <label for="rambler-search">Rambler</label>
+        <input
+          type="text"
+          id="rambler-search"
+          name="query"
+          placeholder="Введите запрос"
+        />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+
+    <div class="search-form">
+      <form action="https://www.aport.ru/search" method="get">
+        <label for="aport-search">Aport</label>
+        <input
+          type="text"
+          id="aport-search"
+          name="q"
+          placeholder="Введите запрос"
+        />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+
+    <div class="search-form">
+      <form action="https://www.google.com/search" method="get">
+        <label for="google-search">Google</label>
+        <input
+          type="text"
+          id="google-search"
+          name="q"
+          placeholder="Введите запрос"
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="search-form">
+      <form action="https://www.filesearch.ru/" method="get">
+        <label for="filesearch">FileSearch</label>
+        <input
+          type="text"
+          id="filesearch"
+          name="query"
+          placeholder="Введите запрос"
+        />
+        <button type="submit">Найти</button>
+      </form>
+    </div>
+  </body>
+</html>
